@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammed Ajaz N – Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --ink:#14213D; --muted:#555F75; --line:#D9DDE6;
+  --accent:#2F5BFF; --accent-ink:#FFFFFF; --tag:#E4EAFF;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1524; --surface:#171F33; --ink:#EEF1F8; --muted:#A3ACC2; --line:#2A3452;
+    --accent:#7C9BFF; --accent-ink:#0F1524; --tag:#232E52; color-scheme: dark;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;margin-right:auto;white-space:nowrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+nav a:hover{color:var(--accent)}
+.hero{padding:84px 0 64px}
+.hero h1{font-size:clamp(46px,10vw,92px);font-weight:800;letter-spacing:-.03em}
+.hero p{max-width:34em;font-size:19px;color:var(--muted);margin:22px 0 30px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);margin-left:8px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,5vw,40px);font-weight:700;margin-bottom:22px}
+.about{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:start}
+.avatar{width:150px;height:150px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:800 54px "Bricolage Grotesque",sans-serif}
+.facts{margin:18px 0 0;padding:0;list-style:none;color:var(--muted)}
+.facts li{padding:6px 0;border-bottom:1px dashed var(--line)}
+.facts b{color:var(--ink);font-weight:500}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
+.skills h3{font-size:19px;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--tag);padding:5px 13px;border-radius:999px;font-size:15px}
+.proj{display:grid;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:23px;margin-bottom:8px}
+.card p{margin:0 0 14px;color:var(--muted)}
+.card a{color:var(--accent);font-weight:500}
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.contact li{display:flex;gap:14px;flex-wrap:wrap}
+.contact li span{min-width:90px;color:var(--muted)}
+footer{padding:30px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+@media (max-width:620px){.about{grid-template-columns:1fr}.avatar{width:110px;height:110px;font-size:40px}.btn.ghost{margin:10px 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <b>Ajaz</b>
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Muhammed Ajaz N</h1>
+  <p>Second-year B.Tech student who enjoys learning how things work and building small projects to prove it.</p>
+  <a class="btn primary" href="#projects">See my projects</a><a class="btn ghost" href="#contact">Get in touch</a>
+</div></header>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <div class="about">
+    <div class="avatar" aria-hidden="true">MA</div>
+    <div>
+      <p>Hi, I’m Ajaz. I’m studying B.Tech and I’m currently in my second year. I like turning ideas into working things, whether that’s a web page, a small program or a circuit. I’m looking for internships and projects where I can learn from real work.</p>
+      <ul class="facts">
+        <li><b>Studying:</b> B.Tech, 2nd year</li>
+        <li><b>Location:</b> Kerala, India</li>
+        <li><b>Interests:</b> Web development, programming, problem solving</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Web</h3><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+    <div><h3>Programming</h3><div class="tags"><span>C</span><span>Python</span><span>Java</span></div></div>
+    <div><h3>Tools</h3><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span></div></div>
+    <div><h3>Personal</h3><div class="tags"><span>Teamwork</span><span>Quick learner</span><span>Problem solving</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="proj">
+    <article class="card">
+      <h3>Personal Portfolio Website</h3>
+      <p>The site you’re looking at. Built with HTML and CSS, it’s responsive on phones and supports light and dark mode.</p>
+      <a href="#top">HTML · CSS</a>
+    </article>
+    <article class="card">
+      <h3>Your next project</h3>
+      <p>Replace this with a project you’ve built: say what it does, which tools you used and what you learned.</p>
+      <a href="https://github.com/" rel="noopener">View on GitHub</a>
+    </article>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <ul>
+    <li><span>Email</span><a href="mailto:yourname@example.com">yourname@example.com</a></li>
+    <li><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></li>
+    <li><span>GitHub</span><a href="https://github.com/" rel="noopener">github.com/your-username</a></li>
+    <li><span>LinkedIn</span><a href="https://www.linkedin.com/" rel="noopener">linkedin.com/in/your-name</a></li>
+  </ul>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Muhammed Ajaz N</div></footer>
+</body>
+</html>
